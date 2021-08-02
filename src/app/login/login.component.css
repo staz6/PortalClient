@@ -1,0 +1,138 @@
+.b{
+  height:100vh;
+  overflow: hidden;
+}
+.signin_heading{
+  /* padding: 20px; */
+  font-size:40px;
+  font-weight: 600;
+  color: #f9fafc;
+  margin-bottom: 20px;
+}
+.background img{
+  width: 100%;
+  height:100vh;
+  filter: brightness(50%);
+ }
+.parent{
+width:28%;
+position:absolute;
+top:40%;
+left:50%;
+transform: translate(-50%,-50%);
+padding: 20px;
+box-sizing: border-box;
+/* background-color: #fff; */
+border-radius: 10px;
+}
+
+input:focus{
+  border-bottom:1px solid blue;
+}
+.signin_button button{
+  border:none;
+  background-color: #fff;
+  color: rgb(5, 0, 0);
+  font-weight: 900;
+  outline:none;
+  padding: 11px 0px;
+  margin-top: 20px;
+  width: 100%;
+}
+  input{
+    margin-bottom: 20px;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #000;
+    outline: none;
+    background-color: #24273a;
+    height:50px;
+}
+input::placeholder{
+  padding: 20px;
+  color:#fff
+}
+mat-checkbox{
+  color: #fff;
+}
+
+.signin_button button:hover{
+    background-color: #04408e;
+    color: #fff;
+    transition: 0.1s all;
+    cursor: pointer;
+}
+
+.input-icons img {
+  position: absolute;
+  background-color: #2f3141;
+  width: 15px;
+  height:18px;
+
+}
+.input-icons {
+  width: 100%;
+  /* display: flex;
+  align-items: center; */
+  /* margin-bottom: 10px; */
+}
+.icon {
+  /* padding: 17px; */
+  min-width: 40px;
+  color: #fff;
+}
+
+.input-field {
+  width: 100%;
+  /* padding: 10px; */
+  text-align: center;
+  color: #fff;
+}
+.b video{
+  height: 110%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo img{
+  width: 220px;
+  height: 50px;
+}
+.mat-checkbox-inner-container{
+  color: #fff !important;
+  /* border: #fff 1px solid; */
+}
+.example-section{
+  display: flex;
+  /* flex-direction: flex-start; */
+
+}
+@media(max-width:768px){
+  .parent{
+    width:70%;
+    margin: auto;
+  }}
+
+@media(max-width:568px){
+  .parent{
+    width:90%;
+    margin: auto;
+  }
+  .signin_heading{
+    font-size: 20px;
+  }
+  .background img{
+    height:auto
+  }
+  .back{
+    background-image: url(../../assets/pics/BG_2-02.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .parent{
+    width: 90%;
+  }
+
+
+
+}

@@ -1,0 +1,258 @@
+<app-navbar></app-navbar>
+
+    <!-- main page -->
+
+    <div class="main">
+      <div class="left">
+        <app-top-section></app-top-section>
+
+        <!-- <div class="">
+          <div class="links">
+            <ul>
+              <li>Dashboard</li>
+              <li>About</li>
+              <li>Notice</li>
+              <li>Change Password</li>
+              <li>Logout</li>
+            </ul>
+          </div>
+        </div> -->
+
+        <div class="clr-row notification-section">
+          <div class="clr-col-md-8">
+            <div class="clr-row">
+
+            <button mat-button (click)="openDialog()" class="btn btn.info">Edit Info</button>
+
+
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Employee ID</div>
+                <div class="info">{{employee.employeeId}}</div>
+              </div>
+
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Name</div>
+                <div class="info">{{employee.name}}</div>
+              </div>
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Father Name</div>
+                <!-- <div class="info">{{employee.fatherName}}</div> -->
+              </div>
+            </div>
+
+            <div class="clr-row">
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">CNIC</div>
+                <div class="info">{{employee.cnic}}</div>
+              </div>
+
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Address</div>
+                <div class="info">{{employee.address}}</div>
+              </div>
+            </div>
+
+            <div class="clr-row">
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Email</div>
+                <div class="info">{{employee.email}}</div>
+              </div>
+
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Personal Email</div>
+                <div class="info">{{employee.personalEmail}}</div>
+              </div>
+            </div>
+
+            <div class="clr-row">
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Emergency Number</div>
+                <div class="info">{{employee.emergencyNumber}}</div>
+              </div>
+
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Mobile Number</div>
+                <div class="info">{{employee.mobileNumber}}</div>
+              </div>
+            </div>
+
+            <div class="clr-row">
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Designation</div>
+                <div class="info">{{employee.designation}}</div>
+              </div>
+
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Shift Timing</div>
+                <div class="info">{{employee.shiftTiming}}</div>
+              </div>
+              <div class="clr-col-md-12 profile-data">
+                <div class="heading">Status</div>
+                <div class="info">{{employee.status}}</div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+            <!-- LEFT SECTION'S RIGHT SIDE  -->
+
+          <div class="clr-col-md-4 right-side">
+            <!-- <div class="quick-access-box">
+              <div class="heading">Who's Out</div>
+              <div class="bar">Today</div>
+
+              <div class="bar" style="background-color: orangered">
+                Tomorrow
+              </div>
+
+              <div class="bar" style="background-color: purple">This Week</div>
+
+              <div class="bar" style="background-color: rgb(255, 196, 0)">
+                Next Week
+              </div>
+
+              <div class="heading">Quick Access</div>
+
+              <div class="bar">Attendance Report</div>
+
+              <div class="bar" style="background-color: purple">
+                Current Salary Snapshot
+              </div>
+
+              <div class="bar" style="background-color: rgb(255, 196, 0)">
+                Next Week
+              </div>
+            </div> -->
+            <div class="clr-row">
+              <div class="clr-col-md-1 quick-access-left">
+                    <p>STATUS</p>
+              </div>
+                <div class="clr-col-md-11 quick-access-right">
+                    <div class="clr-col-md-12 quick-access-info">
+                     <label> Payment </label>
+                     <br>
+                      {{employee.status}}
+                    </div>
+                    <div class="clr-col-md-12 quick-access-info">
+                      <label> Probation Period </label>
+                     <br>
+                      {{employee.status}}
+                    </div>
+                </div>
+            </div>
+<BR>
+            <div class="clr-row">
+              <div class="clr-col-md-1 quick-access-left second">
+                    <p>DESIGNATION</p>
+              </div>
+                <div class="clr-col-md-11 quick-access-right">
+                    <div class="clr-col-md-12 quick-access-info">
+                     <label> Payment </label>
+                     <br>
+                      {{employee.status}}
+                    </div>
+                    <div class="clr-col-md-12 quick-access-info">
+                      <label> Probation Period </label>
+                     <br>
+                      {{employee.status}}
+                    </div>
+                </div>
+            </div>
+<br>
+             <div class="clr-row">
+              <div class="clr-col-md-1 quick-access-left third">
+                    <p>STATUS</p>
+              </div>
+                <div class="clr-col-md-11 quick-access-right">
+                    <div class="clr-col-md-12 quick-access-info">
+                     <label> Payment </label>
+                     <br>
+                      {{employee.status}}
+                    </div>
+                    <div class="clr-col-md-12 quick-access-info">
+                      <label> Probation Period </label>
+                     <br>
+                      {{employee.status}}
+                    </div>
+                </div>
+            </div>
+<br>
+            <div class="clr-row">
+              <div class="clr-col-md-1 quick-access-left fourth">
+                    <p>STATUS</p>
+              </div>
+                <div class="clr-col-md-11 quick-access-right">
+                    <div class="clr-col-md-12 quick-access-info">
+                     <label> Payment </label>
+                     <br>
+                      {{employee.status}}
+                    </div>
+                    <div class="clr-col-md-12 quick-access-info">
+                      <label> Probation Period </label>
+                     <br>
+                      {{employee.status}}
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="top-box">
+          <div class="person-pic">
+            <img src="../../assets/pics/Web-Development.jpg" />
+          </div>
+          <div class="person-name">Abdul Moin</div>
+          <div class="person-profession">Reporting Authority</div>
+        </div>
+        <div class="middle-box">
+          <div class="text">Stay in Touch for updates</div>
+          <div class="social-logo">
+            <img src="../../assets/pics/Web-Development.jpg" />
+            <img src="../../assets/pics/Web-Development.jpg" />
+            <img src="../../assets/pics/Web-Development.jpg" />
+          </div>
+          <!-- <div class="second-row">
+          <div class="heading text-right">
+            <button>Back</button>
+          </div>
+        </div> -->
+        </div>
+        <div class="bottom-box">
+          <div class="text">My Team</div>
+          <div class="team-section clr-row">
+            <div class="team-members clr-col-md-6 clr-col-sm-12">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6 clr-col-sm-12">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed Salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed Salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed Salman Junaid</div>
+            </div>
+            <div class="max-button clr-col-md-12 text-center">
+              <button>View Enlarge</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

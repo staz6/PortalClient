@@ -1,0 +1,128 @@
+<app-navbar></app-navbar>
+    <!-- main page -->
+    <div class="main">
+      <div class="left"></div>
+      <div class="center">
+       <app-top-section></app-top-section>
+
+        <div class="second-row">
+     <!-- <div class="heading text-right">
+            <button>Back</button>
+          </div> -->
+          <div class="time">
+            <H5>Employee Attendance</H5>
+            <label>10:00 AM - 7:00 PM</label>
+          </div>
+          <div class="search-section">
+            <div class="left_side">
+              <input placeholder="Search" />
+              <button>Search</button>
+            </div>
+            <div class="right_side">
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">(9)</div>
+              </div>
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">(9)</div>
+              </div>
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">(9)</div>
+              </div>
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">(9)</div>
+              </div>
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">(9)</div>
+              </div>
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">9</div>
+              </div>
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">9</div>
+              </div>
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">9</div>
+              </div>
+              <div class="right_side_content">
+                <div class="color-box"></div>
+                <div class="text">Normal</div>
+                <div class="text">(9)</div>
+              </div>
+            </div>
+          </div>
+          <div class="history-table">
+            <!-- <clr-datagrid>
+              <clr-dg-column>Date</clr-dg-column>
+              <clr-dg-column>Shift Time</clr-dg-column>
+              <clr-dg-column>Check In</clr-dg-column>
+              <clr-dg-column>Check Out</clr-dg-column>
+              <clr-dg-column>Working Hours</clr-dg-column>
+              <clr-dg-column>Effective Hours</clr-dg-column>
+
+              <clr-dg-row>
+                <clr-dg-cell>{{ "1" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "Salman" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "2-aug-2021" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "blue" }}</clr-dg-cell>
+              </clr-dg-row>
+
+              <clr-dg-row>
+                <clr-dg-cell>{{ "1" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "Salman" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "2-aug-2021" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "blue" }}</clr-dg-cell>
+              </clr-dg-row>
+
+              <clr-dg-row>
+                <clr-dg-cell>{{ "1" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "Salman" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "2-aug-2021" }}</clr-dg-cell>
+                <clr-dg-cell>{{ "blue" }}</clr-dg-cell>
+              </clr-dg-row>
+            </clr-datagrid> -->
+            <clr-datagrid>
+              <clr-dg-column class="gridLabel" ><span class="gridLabelText">Date</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Shift Timing</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Check In</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Check Out</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Working Hours</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Effective Hours</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Status</span></clr-dg-column>
+
+              <clr-dg-row *clrDgItems="let item of attendance" >
+                <clr-dg-cell>{{ item.date }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.shiftTiming }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.checkIn }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.checkOut }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.workedHours }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.effectiveHours }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.status }}</clr-dg-cell>
+              </clr-dg-row>
+            </clr-datagrid>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+

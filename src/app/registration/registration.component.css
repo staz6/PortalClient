@@ -1,0 +1,45 @@
+.background
+{
+  width:100%;
+  height:auto;
+  background-color: #f5f5f5;
+  padding:30px
+}
+mat-form-field{
+  width: 100%;
+  /* background-color: #fff; */
+}
+.submit_button{
+  margin-top:20px;
+  padding: 2px;
+  background-color: #fff;
+  color: #2595e6;
+  border-radius: 100px;
+  border: none;
+  width:90px;
+  cursor:pointer;
+  font-weight: bold;
+  border:2px solid #2595e6;
+  outline: none;
+}
+.submit_button:hover{
+  background-color: #2595e6;
+  color: #fff;
+  transition:.5s all;
+}
+.heading{
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  color: #000;
+}
+.note-row{
+  margin-top: 10px;
+  display:flex;
+
+}
+.note
+{
+  font-weight:bolder;
+  margin-right: 7px;
+}

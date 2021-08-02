@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search" />
+        <input type="checkbox" id="show-menu" />
+        <label for="show-menu" class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </label>
+        <div class="content">
+          <div class="logo"><a href="#">NASTECH</a></div>
+          <ul class="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#" class="desktop-link">My Profile</a>
+              <input type="checkbox" id="show-features" />
+              <label for="show-features">Features</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li><a href="#">Drop Menu 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="desktop-link">Attendence</a>
+              <input type="checkbox" id="show-services" />
+              <label for="show-services">Services</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li><a href="#">Drop Menu 4</a></li>
+                <!-- <li>
+                  <a href="#" class="desktop-link">More Items</a>
+                  <input type="checkbox" id="show-items" />
+                  <label for="show-items">More Items</label>
+                  <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                  </ul>
+                </li> -->
+              </ul>
+            </li>
+            <li><a href="#">Notice</a></li>
+          </ul>
+        </div>
+        <!-- <label for="show-search" class="search-icon"
+          ><i class="fas fa-search"></i
+        ></label> -->
+        <!-- <form action="#" class="search-box">
+          <input
+            type="text"
+            placeholder="Type Something to Search..."
+            required
+          />
+          <button type="submit" class="go-icon">
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
+        </form> -->
+      </nav>
+    </div>
+
+    <!-- main page -->
+
+    <div class="main">
+      <div class="left">
+        <!-- <div class="first-row">
+          <div class="">
+            <div class="background-image">
+              <div class="opacity"></div>
+              <h3>Abdul Moin Maruf</h3>
+            </div>
+            <div class="image">
+              <img src="../../assets/pics/Web-Development.jpg" alt="" />
+            </div>
+          </div>
+        </div> -->
+
+        <app-top-section></app-top-section>
+
+
+        <!-- <div class="">
+          <div class="link">
+            <ul>
+              <li>Dashboard</li>
+              <li>About</li>
+              <li>Notice</li>
+              <li>Change Password</li>
+              <li>Logout</li>
+            </ul>
+          </div>
+        </div> -->
+
+        <div class="clr-row notification-section">
+          <div class="clr-col-md-7 clr-col-sm-12 clr-col-12 left-side">
+            <div class="clr-row">
+              <div class="clr-col-md-12 notification">
+                <img src="../../assets/pics/Web-Development.jpg">
+                <div class="noti-heading">
+                  <label>Information</label>
+                  <div class="noti-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repellat unde delectus at quo amet
+                    dolorum non omnis doloremque,
+                    perferendis molestias saepe ab consectetur enim obcaecati sed sint debitis quaerat?
+                  </div>
+                </div>
+              </div>
+
+              <!-- second notification -->
+              <div class="clr-col-md-12 notification">
+                <img src="../../assets/pics/Web-Development.jpg">
+                <div class="noti-heading">
+                  <label>Information</label>
+                  <div class="noti-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repellat unde delectus at quo amet
+                    dolorum non omnis doloremque,
+                    perferendis molestias saepe ab consectetur enim obcaecati sed sint debitis quaerat?
+                  </div>
+                </div>
+              </div>
+
+              <!-- third notification -->
+              <div class="clr-col-md-12 notification">
+                <img src="../../assets/pics/Web-Development.jpg">
+                <div class="noti-heading">
+                  <label>Information</label>
+                  <div class="noti-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repellat unde delectus at quo amet
+                    dolorum non omnis doloremque,
+                    perferendis molestias saepe ab consectetur enim obcaecati sed sint debitis quaerat?
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="clr-col-md-4 right-side">
+            <div class="quick-access-box">
+              <div class="heading">
+                Who's Out
+              </div>
+              <div class="bar">Today</div>
+
+              <div class="bar" style="background-color: orangered;">Tomorrow</div>
+
+              <div class="bar" style="background-color: purple;">This Week</div>
+
+              <div class="bar" style="background-color: rgb(255, 196, 0);">Next Week</div>
+
+              <div class="heading">
+                Quick Access
+              </div>
+
+              <div class="bar">Attendance Report</div>
+
+              <div class="bar" style="background-color: purple;">Current Salary Snapshot</div>
+
+              <div class="bar" style="background-color: rgb(255, 196, 0);">Next Week</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="top-box">
+          <div class="person-pic">
+            <img src="../../assets/pics/Web-Development.jpg" />
+          </div>
+          <div class="person-name">Abdul Moin</div>
+          <div class="person-profession">Reporting Authority</div>
+        </div>
+        <div class="middle-box">
+          <div class="text">Stay in Touch for updates</div>
+          <div class="social-logo">
+            <img src="../../assets/pics/Web-Development.jpg" />
+            <img src="../../assets/pics/Web-Development.jpg" />
+            <img src="../../assets/pics/Web-Development.jpg" />
+          </div>
+          <!-- <div class="second-row">
+          <div class="heading text-right">
+            <button>Back</button>
+          </div>
+        </div> -->
+        </div>
+        <div class="bottom-box">
+          <div class="text">Nastech Team</div>
+          <div class="team-section clr-row">
+            <div class="team-members clr-col-md-6 clr-col-sm-12">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6 clr-col-sm-12">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed Salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed Salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed salman Junaid</div>
+            </div>
+            <div class="team-members clr-col-md-6">
+              <img src="../../assets/pics/Web-Development.jpg" />
+              <div class="member-name">Syed Salman Junaid</div>
+            </div>
+            <div class="max-button clr-col-md-12 text-center">
+              <button>View Enlarge</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
+<!-- <app-navbar></app-navbar> -->

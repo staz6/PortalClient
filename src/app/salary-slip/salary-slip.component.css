@@ -1,0 +1,42 @@
+.image img{
+  height:90px;
+  width:100%;
+  margin: auto;
+  margin-top: 20px;
+}
+.image{
+  width:500px;
+  margin:auto
+}
+.image h3{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bolder;
+  color: #000;
+  padding-left: 30px;
+}
+
+table tr th,
+table tr td{
+  border: 1px  black solid;
+  text-align: left;
+  padding:5px;
+  color: #000;
+}
+th{
+  font-size: 15px;
+  text-transform: uppercase;
+  /* background-color: rgb(189, 215, 250); */
+}
+.first-row{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.first-table table{
+  width:450px;
+
+}
+
+ 

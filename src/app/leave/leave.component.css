@@ -1,0 +1,50 @@
+.background{
+  background-color: #f5f5f5;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+mat-form-field{
+  width:100%;
+}
+.comment mat-form-field{
+  height:20px;
+
+}
+mat-dialog-content{
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.submit_button{
+  margin-top:20px;
+  padding: 2px;
+  background-color: #fff;
+  color: #2595e6;
+  border-radius: 100px;
+  border: none;
+  width:90px;
+  cursor:pointer;
+  font-weight: bold;
+  border:2px solid #2595e6;
+  outline: none;
+}
+.submit_button:hover{
+  background-color: #2595e6;
+  color: #fff;
+  transition:.5s all;
+}
+.heading{
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  color: #000;
+}
+@media(max-width:576px){
+
+  .submit_button{
+    padding: 2px;
+  }
+}
+
