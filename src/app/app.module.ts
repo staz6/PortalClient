@@ -27,8 +27,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from "@auth0/angular-jwt";
+import {MatSelectModule} from '@angular/material/select'
 import {MatDialogModule} from '@angular/material/dialog';
 import { EditemployeeinfomodalComponent } from './editemployeeinfomodal/editemployeeinfomodal.component'
+
 
 
 
@@ -64,6 +66,7 @@ import { EditemployeeinfomodalComponent } from './editemployeeinfomodal/editempl
     MatIconModule,
     MatTableModule,
     MatFormFieldModule,
+    MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
