@@ -5,6 +5,7 @@ import {catchError} from 'rxjs/operators';
 import {of} from 'rxjs';
 import jwt_decode from 'jwt-decode';
 import { Router } from '@angular/router';
+import { baseurl } from 'src/app/models/base';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,7 @@ export class LoginService {
   user: any;
   private loggedIn = false;
   private token: any;
-
+  
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -36,6 +37,7 @@ export class LoginService {
         email: user.email,
         password: user.password,
       }).subscribe((response) => {
+        console.log(response)
         this.token = response;
         this.setLoggedIn(true, this.token);
 
@@ -47,7 +49,7 @@ export class LoginService {
         localStorage.setItem("token", this.token);
         var decoded:any = jwt_decode(this.token);
         console.log(decoded);
-        localStorage.setItem("admin_id",decoded['sub']);
+        localStorage.setItem("id",decoded['nameid']);
         if  (decoded['role'] == "Employee") {
           this.router.navigateByUrl("/home", { replaceUrl: true });
 
@@ -72,7 +74,7 @@ export class LoginService {
       ? { Authorization: `Bearer ${this.token}` }
       : undefined;
 
-    return this.http.request(method, ' http://usermanagement-api.portal.nastechltd.co' + route,{
+    return this.http.request(method, ' http://localhost:5000' + route,{
       body: data,
       responseType: "text",
       observe: "body",

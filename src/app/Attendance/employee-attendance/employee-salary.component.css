@@ -266,7 +266,7 @@ table{
 }
 
 .background-image{
-  background-image: url(../../assets/pics/Web-Development.jpg);
+  background-image: url(../../../assets/pics/Web-Development.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 60%;

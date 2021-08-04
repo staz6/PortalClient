@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Attendance } from '../models/attendance';
-import { AttendaceService } from '../services/attendace/attendace.service';
+import { Attendance } from '../../models/attendance';
+import { AttendaceService } from '../../services/attendace/attendace.service';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -39,8 +39,9 @@ export class EmployeeSalaryComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    const routeParams = this.route.snapshot.paramMap;
-    const userId = routeParams.get('userId');
+    // const routeParams = this.route.snapshot.paramMap;
+    // const userId = routeParams.get('userId');
+    const userId=localStorage.getItem("id")
     if(userId != null)
     {
       this.getAttendance(userId);
