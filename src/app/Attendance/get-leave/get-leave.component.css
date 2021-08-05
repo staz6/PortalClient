@@ -1,0 +1,9 @@
+.history-table{
+    width:95%;
+    margin:auto;
+    padding: 10px;
+    padding-bottom:15px ;
+    border-top:1px solid rgb(182, 181, 181);
+    background-color: #f5f5f5;
+    margin-bottom: 80px;  
+}
