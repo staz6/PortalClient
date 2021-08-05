@@ -48,9 +48,16 @@
   margin-right:10px;
   margin-bottom: 20px;
   }
+
+@media(max-width:1024px){
+  .background-image h3{
+    left:20%
+  }
+}
+
 @media(max-width:768px){
   .background-image h3{
-    left:29%
+    left:27%
   }
 }
 @media(max-width:600px){

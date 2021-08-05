@@ -30,7 +30,15 @@ import { JwtModule } from "@auth0/angular-jwt";
 import {MatSelectModule} from '@angular/material/select'
 import {MatDialogModule} from '@angular/material/dialog';
 import { EditemployeeinfomodalComponent } from './editemployeeinfomodal/editemployeeinfomodal.component';
-import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component'
+import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component';
+// import { SideNavComponent } from './AdminPortal/side-nav/side-nav.component';
+import { AdminNavComponent } from './AdminPortal/admin-nav/admin-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component'
 
 
 
@@ -55,6 +63,8 @@ import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component'
     NotificationsComponent,
     EditemployeeinfomodalComponent,
     GetLeaveComponent,
+    AdminNavComponent,
+    DashboardComponent,
 
 
   ],
@@ -81,6 +91,11 @@ import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component'
 
       },
     }),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
