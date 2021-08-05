@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+    <!-- main page -->
+    <div class="main">
+      <div class="left"></div>
+      <div class="center">
+       <app-top-section></app-top-section>
+
+        <div class="second-row">
+     
+          <div class="history-table">
+
+            <clr-datagrid>
+              <clr-dg-column class="gridLabel" ><span class="gridLabelText">From</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Till</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Reason</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Type</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Status</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Deduct Salary</span></clr-dg-column>
+              
+
+              <clr-dg-row *clrDgItems="let item of leave" >
+                <clr-dg-cell>{{ item.from }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.till }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.reason }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.leaveType }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.status }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.deductSalary }}</clr-dg-cell>
+                
+              </clr-dg-row>
+            </clr-datagrid>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+

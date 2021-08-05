@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Attendance } from 'src/app/models/attendance';
 import { baseurlAttendance } from 'src/app/models/base';
+import { GetLeave } from 'src/app/models/getLeave';
 import { PostLeave } from 'src/app/models/postLeave';
 
 @Injectable({
@@ -11,9 +12,9 @@ export class AttendaceService {
   
   httpHeaders:any
   constructor(public http:HttpClient ) {
-      let test = localStorage.getItem('token');
+      let token = localStorage.getItem('token');
      this.httpHeaders= new HttpHeaders({
-      'Authorization':`Bearer ${test}`
+      'Authorization':`Bearer ${token}`
     })
     
     }
@@ -29,9 +30,15 @@ export class AttendaceService {
     postLeave(postLeave : PostLeave)
     {
       
-      console.log(this.httpHeaders)
-      return this.http.post<PostLeave>(baseurlAttendance+"postLeave", {
+      return this.http.post<PostLeave>(baseurlAttendance+"postLeave",postLeave,{
+        headers:this.httpHeaders
+      }); 
+     
+    }
+    getLeave(userId:string)
+    {
+      return this.http.get<GetLeave[]>(baseurlAttendance + "getLeave/" + userId, {
         headers: this.httpHeaders
-      });
+      } );
     }
 }
