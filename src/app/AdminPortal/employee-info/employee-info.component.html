@@ -1,0 +1,98 @@
+<div class="left">
+    <div class="clr-row">
+        <div class="clr-col-xl-12">
+            <h3 style="font-weight: bold; margin-left: 20px; margin-bottom: 20px;">Info Table</h3>
+        </div>
+    </div>
+
+    <div class="clr-row">
+        <div class="clr-col-xl-12 project-left-side">
+            <div class="table-heaing" style="padding:15px">
+                <div class="clr-col-xl-12 salman" style="display: flex; align-items: center;">
+                    <i class="fas fa-users" style="color: rgb(73, 195, 252); font-size: 20px; "></i>
+                    <h4 style="font-weight: bold; padding: 10px; padding-top:15px">Employee Information</h4>
+                </div>
+            </div>
+
+            <!-- actual table  -->
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-alignment">
+
+
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Employees </th>
+                    <td mat-cell *matCellDef="let element" class="table-row">
+                        <div class="clr-row">
+                            <div class="clr-col-xl-12">
+                                <div class="clr-row">
+                                    <div class="clr-col-xl-3 text-center">
+                                        <img src="../../../assets/pics/employee.jpg" width="40px" height="40px">
+                                    </div>
+                                    <div class="clr-col-xl-9 employee-names">
+                                        <div class="clr-row">
+                                            <div class="clr-col-xl-12">
+                                                <h4 style="font-size: 18px; font-weight: bold;">Salman</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="clr-row">
+                                            <div class="clr-col-xl-12">
+                                                <h4 style="font-size: 13px; margin-top: -5px;">junaid </h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Designation </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Salary </th>
+                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Contact </th>
+                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Action </th>
+                    <td mat-cell *matCellDef="let element">
+
+
+
+
+                        <div class="dropdown">
+                            <button mat-raised-button class="dropbtn">Actions</button>
+                            <div class="change-position">
+                                <div class="dropdown-content">
+                                    <a   style="text-align: start;">Attendance</a>
+                                    <a (click)="openDialog()" style="text-align: start;">Total Leaves</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>

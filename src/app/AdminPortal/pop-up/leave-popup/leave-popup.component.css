@@ -1,0 +1,22 @@
+/* *{
+    height:90vh !important;
+    width:100vw !important;
+} */
+
+
+.mat-dialog-container{
+    height:90px !important
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    /* margin-top: 10px; */
+    border-radius:0px 0px 10px 10px;
+    overflow: hidden;
+    box-shadow: none!important; 
+  }
+.table-heaing{
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+}

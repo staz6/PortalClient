@@ -41,7 +41,10 @@ import { MatListModule } from '@angular/material/list';
 import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component';
 import {MatCardModule} from '@angular/material/card';
 // import {MatTableModule} from '@angular/material/table';
-import { InventoryRequestsComponent } from './inventory/inventory-requests/inventory-requests.component'
+import { InventoryRequestsComponent } from './inventory/inventory-requests/inventory-requests.component';
+import { EmployeeInfoComponent } from './AdminPortal/employee-info/employee-info.component';
+// import { PopUpsComponent } from './AdminPortal/pop-ups/pop-ups.component';
+import { LeavePopupComponent } from './AdminPortal/pop-up/leave-popup/leave-popup.component'
 
 
 
@@ -71,6 +74,9 @@ import { InventoryRequestsComponent } from './inventory/inventory-requests/inven
     // MatTableModule
     
     InventoryRequestsComponent,
+    EmployeeInfoComponent,
+    // PopUpsComponent,
+    LeavePopupComponent,
 
 
   ],
