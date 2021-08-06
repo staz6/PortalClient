@@ -11,6 +11,7 @@ import { LeaveReportComponent } from './Attendance/leave-report/leave-report.com
 import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component';
 import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component';
 import { SalarySlipComponent } from './Salary/salary-slip/salary-slip.component';
+import { AdminNavComponent } from './AdminPortal/admin-nav/admin-nav.component';
 
 const routes: Routes = [
 
@@ -25,7 +26,12 @@ const routes: Routes = [
   {path : "leavereport",component:LeaveReportComponent  },
   {path: "leave",component:GetLeaveComponent},
   {path: "inventoryticket",component:InventoryTicketComponent},
+ 
+  {path: "admin-nav", component:AdminNavComponent,
+  children:[
   {path: "dashboard", component:DashboardComponent}
+  ]
+}
 
 ];
 

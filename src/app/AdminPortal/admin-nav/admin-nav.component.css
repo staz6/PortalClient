@@ -17,8 +17,6 @@
   top: 0;
   z-index: 1;
 }
-@media(max-width:600px){
-  .sidenav-container{
-      height:auto !important;
-  }
+.mat-drawer-container{
+  height:auto !important;
 }
