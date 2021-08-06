@@ -2,7 +2,7 @@
 .parent-div{
     /* height: 20px; */
     height:80vh !important;
-    width:100vw !important;
+    width:60vw !important;
 }
 
 
@@ -13,8 +13,10 @@ table {
     border-radius:0px 0px 10px 10px;
     overflow: hidden;
     box-shadow: none!important; 
+    text-align: center;
   }
 .table-heaing{
     background-color: #fff;
     border-radius: 10px 10px 0px 0px;
+    text-align: center;
 }
