@@ -1,12 +1,10 @@
-/* *{
-    height:90vh !important;
+
+.parent-div{
+    /* height: 20px; */
+    height:80vh !important;
     width:100vw !important;
-} */
-
-
-.mat-dialog-container{
-    height:90px !important
 }
+
 
 table {
     width: 100%;
