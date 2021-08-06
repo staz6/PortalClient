@@ -9,6 +9,7 @@ import { SalaryHistoryComponent } from './Salary/salary-history/salary-history.c
 import { SubmitDocumentComponent } from './submit-document/submit-document.component';
 import { LeaveReportComponent } from './Attendance/leave-report/leave-report.component';
 import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component';
+import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component';
 import { SalarySlipComponent } from './Salary/salary-slip/salary-slip.component';
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path : 'leaverequest' ,component:LeaveComponent},
   {path : "leavereport",component:LeaveReportComponent  },
   {path: "leave",component:GetLeaveComponent},
-  {path: "inventoryticket",component:InventoryTicketComponent}
+  {path: "inventoryticket",component:InventoryTicketComponent},
+  {path: "dashboard", component:DashboardComponent}
 
 ];
 
