@@ -22,7 +22,8 @@ const routes: Routes = [
   {path : 'attendance', component:EmployeeSalaryComponent},
   {path : 'leaverequest' ,component:LeaveComponent},
   {path : "leavereport",component:LeaveReportComponent  },
-  {path: "leave",component:GetLeaveComponent}
+  {path: "leave",component:GetLeaveComponent},
+  {path: "inventoryticket",component:InventoryTicketComponent}
 
 ];
 
