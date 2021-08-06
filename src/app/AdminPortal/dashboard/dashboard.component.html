@@ -1,0 +1,170 @@
+<div class="left">
+
+    <div class="card-parent">
+        <mat-card>
+            <div class="clr-row ">
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6">
+
+                    <!-- <i class="fas fa-users fa-3x for-align"></i> -->
+                    <i class="fas fa-tasks fa-3x for-align"></i>
+
+                </div>
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6 for-align">
+                    <h2 style="font-weight: 500;">
+                        15
+                    </h2>
+                </div>
+            </div>
+            <div class="clr-row">
+                <div class="clr-col-xl-12 clr-col-lg-12 clr-col-md-12 text-center" style="margin-top: 10px;">
+                    <h4 style="font-weight: bolder;">Total Projects</h4>
+                </div>
+            </div>
+        </mat-card>
+
+
+
+
+        <mat-card>
+            <div class="clr-row">
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6">
+
+                    <i class="fas fa-tasks fa-3x for-align" style="color: rgb(6, 187, 6)"></i>
+
+
+                </div>
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6 for-align">
+                    <h2 style="font-weight: 500;">
+                        15
+                    </h2>
+                </div>
+            </div>
+            <div class="clr-row">
+                <div class="clr-col-xl-12 clr-col-lg-12 clr-col-md-12 text-center" style="margin-top: 10px;">
+                    <h4 style="font-weight: bolder;">On Going Projects</h4>
+                </div>
+            </div>
+        </mat-card>
+
+        <mat-card>
+            <div class="clr-row">
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6">
+
+                    <i class="fas fa-tasks fa-3x for-align" style="color: rgb(6, 115, 187)"></i>
+
+                </div>
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6 for-align">
+                    <h2 style="font-weight: 500;">
+                        15
+                    </h2>
+                </div>
+            </div>
+            <div class="clr-row">
+                <div class="clr-col-xl-12 clr-col-lg-12 clr-col-md-12 text-center" style="margin-top: 10px;">
+                    <h4 style="font-weight: bolder;">Completed Projects</h4>
+                </div>
+            </div>
+        </mat-card>
+        <mat-card>
+            <div class="clr-row">
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6">
+
+                    <i class="fas fa-tasks fa-3x for-align" style="color: rgb(211, 5, 5)"></i>
+
+                </div>
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6 for-align">
+                    <h2 style="font-weight: 500;">
+                        15
+                    </h2>
+                </div>
+            </div>
+            <div class="clr-row">
+                <div class="clr-col-xl-12 clr-col-lg-12 clr-col-md-12 text-center" style="margin-top: 10px;">
+                    <h4 style="font-weight: bolder;">Cancelled Projects</h4>
+                </div>
+            </div>
+        </mat-card>
+        <mat-card>
+            <div class="clr-row">
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6">
+
+                    <i class="fas fa-users fa-3x for-align" style="color: rgb(73, 195, 252)"></i>
+
+                </div>
+                <div class="clr-col-xl-6 clr-col-lg-6 clr-col-md-6 for-align">
+                    <h2 style="font-weight: 500;">
+                        15
+                    </h2>
+                </div>
+            </div>
+            <div class="clr-row">
+                <div class="clr-col-xl-12 clr-col-lg-12 clr-col-md-12 text-center" style="margin-top: 10px;">
+                    <h4 style="font-weight: bolder;">Total Employees</h4>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+
+    <!-- PROJECTS INFO  -->
+
+    <div class="clr-row second-row">
+        <!-- LEFT SIDE -->
+
+        <div class="clr-col-xl-8 project-left-side">
+            <div class="table-heaing">
+                <div class="clr-col-xl-12">
+                    <h4 style="font-weight: bold; padding: 10px; padding-top:15px">Projects</h4>
+                </div>
+                <div class="clr-col-xl-12" style="display: flex; align-items: center;">
+                    <i class="far fa-check-circle" style="color: rgb(73, 195, 252); font-size: 20px; "></i>
+                    <h5 style=" margin-left:15px">project done this month</h5>
+                </div>
+            </div>
+
+            <!-- actual table  -->
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                
+
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> Client </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Members </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                    <th mat-header-cell *matHeaderCellDef> Budget </th>
+                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+
+        <div class="clr-col-xl-4">
+            <div class="clr-col-xl-12">
+                <h4 style="font-weight: bold; padding: 10px; padding-top:15px">Latest News</h4>
+            </div>
+            <div class="clr-col-xl-12" style="display: flex; align-items: center;">
+                <i class="fas fa-arrow-up" style="color: rgb(52, 255, 96); font-size: 20px; "></i>
+                <h5 style=" margin-left:15px">24% this month</h5>
+            </div>
+        </div>
+    </div>
+
+
+</div>

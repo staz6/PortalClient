@@ -38,7 +38,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component'
+import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component';
+import {MatCardModule} from '@angular/material/card';
+// import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -65,10 +67,13 @@ import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component'
     GetLeaveComponent,
     AdminNavComponent,
     DashboardComponent,
+    // MatTableModule
+    
 
 
   ],
   imports: [
+    MatCardModule,
     HttpClientModule,
     MatCheckboxModule,
     BrowserModule,

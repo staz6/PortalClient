@@ -9,6 +9,7 @@ import { SalaryHistoryComponent } from './salary-history/salary-history.componen
 import { SubmitDocumentComponent } from './submit-document/submit-document.component';
 import { LeaveReportComponent } from './Attendance/leave-report/leave-report.component';
 import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component';
+import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component';
 
 const routes: Routes = [
 
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path : 'attendance', component:EmployeeSalaryComponent},
   {path : 'leaverequest' ,component:LeaveComponent},
   {path : "leavereport",component:LeaveReportComponent  },
-  {path: "leave",component:GetLeaveComponent}
+  {path: "leave",component:GetLeaveComponent},
+  {path: "dashboard", component:DashboardComponent}
 
 ];
 
