@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { PostLeave } from 'src/app/models/postLeave';
+import { PostLeave } from 'src/app/models/attendance/postLeave';
 import { AttendaceService } from 'src/app/services/attendace/attendace.service';
 
 
@@ -32,6 +32,10 @@ export class LeaveComponent implements OnInit {
     this.body = this.Form.value;
     this.service.postLeave(this.body).subscribe( response => {
       console.log(response)
+      
+      this.Form.markAsPristine();
+      this.Form.markAsUntouched();
+      this.Form.updateValueAndValidity();
     }, Error => {
       console.log(Error);
     })

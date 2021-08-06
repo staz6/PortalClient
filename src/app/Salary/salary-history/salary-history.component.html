@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="main">
+  <div class="left"></div>
+  <div class="center">
+    <app-top-section></app-top-section>
+    <div class="second-row">
+      <div class="heading">
+        <H2>EMPLOYEE SALARY HISTORY</H2>
+        <!-- <button>Back</button> -->
+      </div>
+      <div class="history-table">
+        <clr-datagrid>
+          <clr-dg-column>Date</clr-dg-column>
+          <clr-dg-column>Amount</clr-dg-column>
+          <clr-dg-column>Deduction</clr-dg-column>
+          <clr-dg-column>Net Amount</clr-dg-column>
+          <clr-dg-column>Status</clr-dg-column>
+          <clr-dg-column>Action</clr-dg-column>
+
+          <clr-dg-row *clrDgItems="let item of salaryHistory">
+            <clr-dg-cell>{{ item.month }}</clr-dg-cell>
+            <clr-dg-cell>{{ item.amount }}</clr-dg-cell>
+            <clr-dg-cell>{{ item.deduction }}</clr-dg-cell>
+            <clr-dg-cell>{{ item.netAmount }}</clr-dg-cell>
+            <clr-dg-cell>{{ item.status }}</clr-dg-cell>
+            <clr-dg-cell><a  [routerLink]="['/salaryslip/'+item.id]">View More</a></clr-dg-cell>
+          </clr-dg-row>
+         
+        </clr-datagrid>
+      </div>
+    </div>
+  </div>
+</div>

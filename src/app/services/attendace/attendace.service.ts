@@ -1,9 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Attendance } from 'src/app/models/attendance';
+import { Attendance } from 'src/app/models/attendance/attendance';
 import { baseurlAttendance } from 'src/app/models/base';
-import { GetLeave } from 'src/app/models/getLeave';
-import { PostLeave } from 'src/app/models/postLeave';
+import { GetLeave } from 'src/app/models/attendance/getLeave';
+import { LeaveHistory } from 'src/app/models/attendance/leaveHistory';
+import { PostLeave } from 'src/app/models/attendance/postLeave';
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +41,11 @@ export class AttendaceService {
       return this.http.get<GetLeave[]>(baseurlAttendance + "getLeave/" + userId, {
         headers: this.httpHeaders
       } );
+    }
+    getLeaveHistory(userId:string)
+    {
+      return this.http.get<LeaveHistory>(baseurlAttendance + "getLeaveHistory/"+userId,{
+        headers:this.httpHeaders
+      })
     }
 }

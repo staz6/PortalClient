@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { ClarityModule } from '@clr/angular';
-import { SalaryHistoryComponent } from './salary-history/salary-history.component';
+import { SalaryHistoryComponent } from './Salary/salary-history/salary-history.component';
 import { EmployeeSalaryComponent } from './Attendance/employee-attendance/employee-salary.component';
 import { MatIconModule} from '@angular/material/icon';
-import { SalarySlipComponent } from './salary-slip/salary-slip.component';
+import { SalarySlipComponent } from './Salary/salary-slip/salary-slip.component';
 import { MatTableModule} from '@angular/material/table';
 import { SubmitDocumentComponent } from './submit-document/submit-document.component';
 import { LoginComponent } from './login/login.component';
@@ -17,7 +17,7 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatInputModule} from '@angular/material/input';
 import { DocumentsSubmitComponent } from './documents-submit/documents-submit.component';
-import { InventoryTicketComponent } from './inventory-ticket/inventory-ticket.component';
+import { InventoryTicketComponent } from './inventory/inventory-ticket/inventory-ticket.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TopSectionComponent } from './top-section/top-section.component';
 import { LeaveComponent } from './Attendance/leave/leave.component';
@@ -38,7 +38,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component'
+import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component';
+import { InventoryRequestsComponent } from './inventory/inventory-requests/inventory-requests.component'
 
 
 
@@ -65,6 +66,7 @@ import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component'
     GetLeaveComponent,
     AdminNavComponent,
     DashboardComponent,
+    InventoryRequestsComponent,
 
 
   ],

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetLeave } from 'src/app/models/getLeave';
+import { GetLeave } from 'src/app/models/attendance/getLeave';
 import { AttendaceService } from 'src/app/services/attendace/attendace.service';
 
 @Component({

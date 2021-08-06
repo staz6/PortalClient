@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
   getData(){
       this.service.getDataId().subscribe((data)=>{
         this.employee=data;
+        console.log(data)
 
           // console.log(this.content)
       })
