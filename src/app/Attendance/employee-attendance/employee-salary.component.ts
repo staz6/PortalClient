@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Attendance } from '../../models/attendance';
+import { Attendance } from '../../models/attendance/attendance';
 import { AttendaceService } from '../../services/attendace/attendace.service';
 export interface PeriodicElement {
   name: string;

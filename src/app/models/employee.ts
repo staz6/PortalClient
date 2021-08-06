@@ -7,6 +7,7 @@ export interface Employee
   emergencyNumber: string;
   mobileNumber: string;
   designation: string;
+  joiningDate:string;
   status: string;
   email: string;
   personalEmail: string;
