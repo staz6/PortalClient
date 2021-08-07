@@ -30,6 +30,11 @@ export class EmployeesService {
       headers: this.httpHeaders
     })
   }
+  getAllEmployeeInfo(){
+    return this.http.get<Employee[]>(baseurl + 'getAllEmployee', {
+      headers:this.httpHeaders
+    })
+  }
 
 
 }
