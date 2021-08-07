@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { LeavePopupComponent } from '../../AdminPortal/employee-info/leave-popup/leave-popup.component'
-
-
-
+import {InventoryUpdatePopupComponent} from '../inventory/inventory-update-popup/inventory-update-popup.component'
 
 export interface PeriodicElement {
   name: string;
@@ -26,21 +23,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 @Component({
-  selector: 'app-employee-info',
-  templateUrl: './employee-info.component.html',
-  styleUrls: ['./employee-info.component.css']
+  selector: 'app-inventory',
+  templateUrl: './inventory.component.html',
+  styleUrls: ['./inventory.component.css']
 })
-
-export class EmployeeInfoComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'action'];
+export class InventoryComponent implements OnInit {
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','increase', 'action'];
   dataSource = ELEMENT_DATA;
 
-  constructor( public dialog: MatDialog) {
-    
-   }
+  constructor( public dialog:MatDialog) { }
 
-  ngOnInit(): void {}
-  openDialog() {
-    const dialogRef = this.dialog.open(LeavePopupComponent);
-}
+  ngOnInit(): void {
+  }
+  openUpdate() {
+    const dialogRef = this.dialog.open(InventoryUpdatePopupComponent);
+  }
 }

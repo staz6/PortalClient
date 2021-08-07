@@ -13,7 +13,8 @@ import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component'
 import { SalarySlipComponent } from './Salary/salary-slip/salary-slip.component';
 import { AdminNavComponent } from './AdminPortal/admin-nav/admin-nav.component';
 import { EmployeeInfoComponent } from './AdminPortal/employee-info/employee-info.component';
-import { LeavePopupComponent } from './AdminPortal/pop-up/leave-popup/leave-popup.component';
+import { LeavePopupComponent } from './AdminPortal/employee-info/leave-popup/leave-popup.component';
+import { InventoryComponent } from './AdminPortal/inventory/inventory.component';
 
 const routes: Routes = [
 
@@ -32,7 +33,8 @@ const routes: Routes = [
   children:[
   {path: "dashboard", component:DashboardComponent},
   {path:"emplyee-info", component:EmployeeInfoComponent},
-  {path:"leave", component:LeavePopupComponent}
+  {path:"leave", component:LeavePopupComponent},
+  {path:"admin-inventory", component:InventoryComponent}
   ]
 }
 

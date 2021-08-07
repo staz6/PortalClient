@@ -44,7 +44,9 @@ import {MatCardModule} from '@angular/material/card';
 import { InventoryRequestsComponent } from './inventory/inventory-requests/inventory-requests.component';
 import { EmployeeInfoComponent } from './AdminPortal/employee-info/employee-info.component';
 // import { PopUpsComponent } from './AdminPortal/pop-ups/pop-ups.component';
-import { LeavePopupComponent } from './AdminPortal/pop-up/leave-popup/leave-popup.component'
+import { LeavePopupComponent } from './AdminPortal/employee-info/leave-popup/leave-popup.component';
+import { InventoryComponent } from './AdminPortal/inventory/inventory.component';
+import { InventoryUpdatePopupComponent } from './AdminPortal/inventory/inventory-update-popup/inventory-update-popup.component'
 
 
 
@@ -71,12 +73,12 @@ import { LeavePopupComponent } from './AdminPortal/pop-up/leave-popup/leave-popu
     GetLeaveComponent,
     AdminNavComponent,
     DashboardComponent,
-    // MatTableModule
     
     InventoryRequestsComponent,
     EmployeeInfoComponent,
-    // PopUpsComponent,
     LeavePopupComponent,
+    InventoryComponent,
+    InventoryUpdatePopupComponent,
 
 
   ],
