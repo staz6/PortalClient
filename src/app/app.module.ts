@@ -50,6 +50,7 @@ import { AttendancePopupComponent } from './AdminPortal/employee-info/attendance
 import { InventoryComponent } from './AdminPortal/inventory/inventory.component';
 import { InventoryUpdatePopupComponent } from './AdminPortal/inventory/inventory-update-popup/inventory-update-popup.component';
 import { InventoryCreatePopupComponent } from './AdminPortal/inventory/inventory-create-popup/inventory-create-popup.component';
+import { InventoryPopupComponent } from './Admin-portal/employee-info/inventory-popup/inventory-popup.component';
 
 
 
@@ -83,7 +84,8 @@ import { InventoryCreatePopupComponent } from './AdminPortal/inventory/inventory
     LeavePopupComponent,
     InventoryComponent,
     InventoryUpdatePopupComponent,
-    InventoryCreatePopupComponent
+    InventoryCreatePopupComponent,
+    InventoryPopupComponent
 
 
   ],

@@ -3,3 +3,7 @@
     color: #f1f1f1;
   
   }
+.dropDown{
+  text-align: start;
+  cursor: pointer;
+}

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { baseurlAttendance, baseurlInventory } from 'src/app/models/base';
 import { GetInventory } from 'src/app/models/inventory/getInventory';
 import { InventoryPost } from 'src/app/models/inventory/inventorypost';
+import { InventoryQuantity } from 'src/app/models/inventory/inventoryQuantity';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +45,13 @@ export class InventoryService {
     }
     deleteInventory(id:number){
       return this.http.delete(baseurlInventory+"inventory/"+id,{
+        headers:this.httpHeaders
+      })
+    }
+    inventoryQuantity(id:number,value:boolean){
+      return this.http.put(baseurlInventory+"inventoryQuantity/"+id,{
+        value:value
+      }, {
         headers:this.httpHeaders
       })
     }

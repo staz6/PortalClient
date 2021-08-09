@@ -39,6 +39,11 @@ export class InventoryComponent implements OnInit {
       console.log(Error.message)
     })
   }
+  inventoryQuantity(id:number,value:boolean){
+    this.service.inventoryQuantity(id,value).subscribe(response => {
+      this.getInventory();
+    })
+  }
 
 
   openUpdate(id:number) {

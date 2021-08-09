@@ -40,14 +40,15 @@
                     <td mat-cell *matCellDef="let element" >
                         
                             <span>
-                                <button mat-button>
-                                    <i class="fas fa-plus"></i>
-                                </button>
+                                <button mat-button (click)="inventoryQuantity(element.id,false)">
+                                    <i class="fas fa-minus"></i>
+                                    </button>
                             <span>
                                 {{element.quantity}} 
                             </span>
-                                <button mat-button>
-                                <i class="fas fa-minus"></i>
+                                
+                                <button mat-button (click)="inventoryQuantity(element.id,true)">
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </span>
                             

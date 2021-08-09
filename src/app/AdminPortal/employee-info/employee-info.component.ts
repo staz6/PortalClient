@@ -13,7 +13,7 @@ import { AttendancePopupComponent } from './attendance-popup/attendance-popup.co
 @Component({
   selector: 'app-employee-info',
   templateUrl: './employee-info.component.html',
-  styleUrls: ['./employee-info.component.css']
+  styleUrls: ['../../app.component.css','./employee-info.component.css']
 })
 
 export class EmployeeInfoComponent implements OnInit {
