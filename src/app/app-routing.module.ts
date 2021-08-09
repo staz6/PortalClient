@@ -31,7 +31,7 @@ const routes: Routes = [
   {path: "inventoryticket",component:InventoryTicketComponent},
   {path: "admin-nav", component:AdminNavComponent,
   children:[
-  {path: "dashboard", component:DashboardComponent},
+  {path: "", component:DashboardComponent},
   {path:"emplyee-info", component:EmployeeInfoComponent},
   {path:"leave", component:LeavePopupComponent},
   {path:"admin-inventory", component:InventoryComponent}

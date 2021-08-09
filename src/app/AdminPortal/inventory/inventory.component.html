@@ -15,7 +15,7 @@
                     <h4 style="font-weight: bold; padding: 10px; padding-top:15px">Details</h4>
                 </div>
                 <div class="clr-col-xl-4 text-right">
-                    <button mat-raised-button>Create
+                    <button (click)="inventoryCreateDialog()" class="btn-hover" mat-raised-button>Create
                         <i class="fas fa-plus"></i>
                     </button>
                 </div>
@@ -28,74 +28,44 @@
 
 
                 <!-- Position Column -->
-                <ng-container matColumnDef="position">
-                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Employees </th>
+                <ng-container matColumnDef="item">
+                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Item </th>
                     <td mat-cell *matCellDef="let element" class="table-row">
-                        <div class="clr-row">
-                            <div class="clr-col-xl-12">
-                                <div class="clr-row">
-                                    <div class="clr-col-xl-3 text-center">
-                                        <img src="../../../assets/pics/employee.jpg" width="40px" height="40px">
-                                    </div>
-                                    <div class="clr-col-xl-9 employee-names">
-                                        <div class="clr-row">
-                                            <div class="clr-col-xl-12">
-                                                <h4 style="font-size: 18px; font-weight: bold;">Salman</h4>
-                                            </div>
-                                        </div>
+                        {{element.item}}
+                    </td>
+                </ng-container>
 
-                                        <div class="clr-row">
-                                            <div class="clr-col-xl-12">
-                                                <h4 style="font-size: 13px; margin-top: -5px;">junaid </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <ng-container matColumnDef="quantity">
+                    <th mat-header-cell *matHeaderCellDef class="table-alignment "> Stock </th>
+                    <td mat-cell *matCellDef="let element" >
+                        
+                            <span>
+                                <button mat-button>
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            <span>
+                                {{element.quantity}} 
+                            </span>
+                                <button mat-button>
+                                <i class="fas fa-minus"></i>
+                                </button>
+                            </span>
+                            
+                        
 
                     </td>
                 </ng-container>
 
                 <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Designation </th>
-                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Description </th>
+                    <td mat-cell  *matCellDef="let element"  > <span [matTooltip]="element.description"  class="truncate-text">
+                        {{element.description | slice:0:50}}
+                    </span>  </td>
                 </ng-container>
 
-                <!-- Weight Column -->
-                <ng-container matColumnDef="weight">
-                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Salary </th>
-                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-                </ng-container>
 
-                <!-- Symbol Column -->
-                <ng-container matColumnDef="symbol">
-                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Contact </th>
-                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-                </ng-container>
-
-                <ng-container matColumnDef="increase">
-                    <th mat-header-cell *matHeaderCellDef class="table-alignment"> Stock </th>
-                    <td mat-cell *matCellDef="let element" style="width: 20%;">
-                        <div class="increase-parent"
-                            style="display: flex; justify-content: space-around;align-items: center;">
-                            <span class="inc-btn">
-                                <button mat-button>
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </span>
-                            <span>3</span>
-                            <span class="inc-btn">
-                                <button mat-button>
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                            </span>
-                        </div>
-
-                    </td>
-                </ng-container>
+                
 
                 <ng-container matColumnDef="action">
                     <th mat-header-cell *matHeaderCellDef class="table-alignment"> Action </th>
@@ -108,12 +78,8 @@
                             <button mat-raised-button class="dropbtn">Actions</button>
                             <div class="change-position">
                                 <div class="dropdown-content">
-                                    <a (click)="openUpdate()" style="text-align: start;">Update</a>
-                                    <a style="text-align: start;">Delete</a>
-                                    <!-- <div style="height:auto;width:auto; display: flex; flex-direction: column;align-items: center; justify-content: center; ">
-                                        <button mat-raised-button style="margin: 10px 25px 10px 25px;">Update</button>
-                                        <button mat-raised-button style="margin: 10px 25px 10px 25px;">Delete</button>
-                                    </div> -->
+                                    <a (click)="openUpdate(element.id)" style="text-align: start;">Update</a>
+                                    <a (click)="deleteInventory(element.id)" style="text-align: start;">Delete</a>
                                 </div>
                             </div>
                         </div>

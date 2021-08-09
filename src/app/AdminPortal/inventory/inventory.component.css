@@ -7,12 +7,13 @@
 .mat-dialog-container{
   height:90vh !important
 }
+
 table {
     width: 90%;
     margin: auto;
     /* margin-top: 10px; */
     border-radius:0px 0px 10px 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-shadow: none!important; 
   }
 .table-heaing{
@@ -39,6 +40,11 @@ table {
 }
 h4{
     margin: 0%;
+}
+.truncate-text {
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+  white-space: nowrap;
 }
 .dropbtn {
     background-color: #9bc2f5;
@@ -104,6 +110,7 @@ h4{
         margin-left: 215px;
     }
 }
+
 @media(min-width:1024px) and (max-width:1200px){
     .left{
         height:100%

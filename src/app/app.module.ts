@@ -37,6 +37,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatTooltipModule} from '@angular/material/tooltip'
 import { MatListModule } from '@angular/material/list';
 import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component';
 import {MatCardModule} from '@angular/material/card';
@@ -48,6 +49,7 @@ import { LeavePopupComponent } from './AdminPortal/employee-info/leave-popup/lea
 import { AttendancePopupComponent } from './AdminPortal/employee-info/attendance-popup/attendance-popup.component';
 import { InventoryComponent } from './AdminPortal/inventory/inventory.component';
 import { InventoryUpdatePopupComponent } from './AdminPortal/inventory/inventory-update-popup/inventory-update-popup.component';
+import { InventoryCreatePopupComponent } from './AdminPortal/inventory/inventory-create-popup/inventory-create-popup.component';
 
 
 
@@ -80,7 +82,8 @@ import { InventoryUpdatePopupComponent } from './AdminPortal/inventory/inventory
     EmployeeInfoComponent,
     LeavePopupComponent,
     InventoryComponent,
-    InventoryUpdatePopupComponent
+    InventoryUpdatePopupComponent,
+    InventoryCreatePopupComponent
 
 
   ],
@@ -97,6 +100,7 @@ import { InventoryUpdatePopupComponent } from './AdminPortal/inventory/inventory
     MatFormFieldModule,
     MatSelectModule,
     FormsModule,
+    MatTooltipModule,
     ReactiveFormsModule,
     MatInputModule,
     MatDialogModule,

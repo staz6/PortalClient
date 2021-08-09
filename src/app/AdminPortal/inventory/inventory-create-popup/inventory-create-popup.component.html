@@ -1,42 +1,43 @@
 <!-- heading -->
 <div class="clr-row">
     <div class="clr-col-xl-12">
-        <h5 style="font-weight: bold; font-size: 20px;padding:0px 0 20px 0; color: black;">Update</h5>
+        <h5 style="font-weight: bold; font-size: 20px;padding:0px 0 20px 0; color: black;">Create</h5>
     </div>
 </div>
-<form novalidate [formGroup]="Form" (ngSubmit)="updateInventory()">
-<table class="example-full-width" cellspacing="0" >
+
+<form novalidate [formGroup]="Form" (ngSubmit)="postInventory()">
+<table class="example-full-width" cellspacing="0">
     <tr>
         <td>
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Items</mat-label>
-                <input formControlName="item" matInput required  [(ngModel)]="body.item"/>
+                <input formControlName="item" matInput required  />
             </mat-form-field>
-        </td>   
+        </td>
 
         <td>
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Description</mat-label>
-                <input formControlName="description" matInput required [(ngModel)]="body.description" />
+                <input formControlName="description" matInput required  />
             </mat-form-field>
         </td>
     
         <td>
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Quantity</mat-label>
-                <input formControlName="quantity" matInput required accept="number" [(ngModel)]="body.quantity" />
+                <input formControlName="quantity" matInput required accept="number"  />
             </mat-form-field>
         </td>
     </tr>
 </table>
-
-<!-- button  -->
-
 <div class="clr-row">
     <div class="clr-col-xl-12 text-right update-btn">
         <button mat-raised-button  type="submit"
         [disabled]="Form.invalid"
-        mat-dialog-close class="btn-hover" ng-disabled="form.$pristine" style=" font-weight: 500; outline: none;">Update</button>
+        mat-dialog-close class="btn-hover"  style=" font-weight: 500; outline: none;">Create</button>
     </div>
 </div>
 </form>
+
+<!-- button  -->
+

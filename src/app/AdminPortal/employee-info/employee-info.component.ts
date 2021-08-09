@@ -44,4 +44,7 @@ export class EmployeeInfoComponent implements OnInit {
     const dialogRef = this.dialog.open(LeavePopupComponent);
     
   }
+  openInventoryDialog(userId:string){
+
+  }
 }
