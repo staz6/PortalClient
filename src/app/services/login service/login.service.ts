@@ -33,7 +33,7 @@ export class LoginService {
 
   login(user:any) {
     if (user.email !== "" && user.password !== "") {
-      return this.request("POST", "/api/Account/login", {
+      return this.request("POST", "login", {
         email: user.email,
         password: user.password,
       }).subscribe((response) => {
@@ -74,7 +74,7 @@ export class LoginService {
       ? { Authorization: `Bearer ${this.token}` }
       : undefined;
 
-    return this.http.request(method, ' http://localhost:5000' + route,{
+    return this.http.request(method, baseurl + route,{
       body: data,
       responseType: "text",
       observe: "body",
