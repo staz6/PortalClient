@@ -5,11 +5,6 @@ import { EmployeesService } from 'src/app/services/employee/employees.service';
 import { LeavePopupComponent } from '../../AdminPortal/employee-info/leave-popup/leave-popup.component'
 import { AttendancePopupComponent } from './attendance-popup/attendance-popup.component';
 
-
-
-
-
-
 @Component({
   selector: 'app-employee-info',
   templateUrl: './employee-info.component.html',

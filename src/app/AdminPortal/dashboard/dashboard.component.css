@@ -1,6 +1,10 @@
 mat-card{
     width:200px;
+    height:140px;
     margin-top: 20px;
+    /* padding: 0 !important; */
+    border-radius: 10px !important;
+
     /* height:100px */
 }
 h1,h2,h3,h4,h5,p{
@@ -23,7 +27,7 @@ h1,h2,h3,h4,h5,p{
 }
 mat-card{
     margin-right: 20px;
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 /* projects sections  */
@@ -47,6 +51,12 @@ table {
     background-color: #fff;
     border-radius: 10px 10px 0px 0px;
 }
+ .background-image1{
+    background-image: linear-gradient(rgba(149, 122, 247, 0.7), rgba(23, 13, 66, 0.7)), url("../../../assets/pics/projects.jpg");
+    background-size: cover;
+}
+
+
 
 
 @media(min-width:600px){
