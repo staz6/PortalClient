@@ -15,7 +15,7 @@
             </div>
 
             <!-- actual table  -->
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-alignment">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-alignment" style="margin-bottom: 30px;">
 
 
 
@@ -32,13 +32,13 @@
                                     <div class="clr-col-xl-9 employee-names">
                                         <div class="clr-row">
                                             <div class="clr-col-xl-12">
-                                                <h4 style="font-size: 18px; font-weight: bold;">{{element.name}}</h4>
+                                                <h4 style="font-size: 14px; font-weight: bold;">{{element.name}}</h4>
                                             </div>
                                         </div>
 
                                         <div class="clr-row">
                                             <div class="clr-col-xl-12">
-                                                <h4 style="font-size: 13px; margin-top: -5px;">{{element.email}} </h4>
+                                                <h4 style="font-size: 12px; margin-top: -5px;">{{element.email}} </h4>
                                             </div>
                                         </div>
 
@@ -93,6 +93,7 @@
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
+            <!-- <div></div> -->
         </div>
     </div>
 </div>
