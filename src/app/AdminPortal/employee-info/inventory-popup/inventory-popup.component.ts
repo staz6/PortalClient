@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory-popup.component.css']
 })
 export class InventoryPopupComponent implements OnInit {
-
+  displayedColumns: string[] = ['date', 'shiftTiming', 'checkIn', 'checkOut','workedHours','effectiveHours','status'];
+  dataSource=[]
   constructor() { }
 
   ngOnInit(): void {

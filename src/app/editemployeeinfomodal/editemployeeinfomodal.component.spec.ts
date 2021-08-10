@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditemployeeinfomodalComponent } from './editemployeeinfomodal.component';
+import { EditemployeeinfomodalComponent } from '../../../editemployeeinfomodal.component';
 
 describe('EditemployeeinfomodalComponent', () => {
   let component: EditemployeeinfomodalComponent;

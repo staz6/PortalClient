@@ -1,9 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { baseurlAttendance, baseurlInventory } from 'src/app/models/base';
+import { baseurl, baseurlAttendance, baseurlInventory, baseurlInventoryRequest } from 'src/app/models/base';
 import { GetInventory } from 'src/app/models/inventory/getInventory';
 import { InventoryPost } from 'src/app/models/inventory/inventorypost';
 import { InventoryQuantity } from 'src/app/models/inventory/inventoryQuantity';
+import { PostInventoryRequest } from 'src/app/models/inventory/postInventoryRequest';
 
 @Injectable({
   providedIn: 'root'
@@ -55,5 +56,6 @@ export class InventoryService {
         headers:this.httpHeaders
       })
     }
+   
   
 }

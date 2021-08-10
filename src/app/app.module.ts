@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from "@auth0/angular-jwt";
 import {MatSelectModule} from '@angular/material/select'
 import {MatDialogModule} from '@angular/material/dialog';
-import { EditemployeeinfomodalComponent } from './editemployeeinfomodal/editemployeeinfomodal.component';
+import { EditemployeeinfomodalComponent } from './editemployeeinfomodal/editemployeeinfomodal.component'
 import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component';
 // import { SideNavComponent } from './AdminPortal/side-nav/side-nav.component';
 import { AdminNavComponent } from './AdminPortal/admin-nav/admin-nav.component';
@@ -50,7 +50,7 @@ import { AttendancePopupComponent } from './AdminPortal/employee-info/attendance
 import { InventoryComponent } from './AdminPortal/inventory/inventory.component';
 import { InventoryUpdatePopupComponent } from './AdminPortal/inventory/inventory-update-popup/inventory-update-popup.component';
 import { InventoryCreatePopupComponent } from './AdminPortal/inventory/inventory-create-popup/inventory-create-popup.component';
-import { InventoryPopupComponent } from './Admin-portal/employee-info/inventory-popup/inventory-popup.component';
+import { InventoryPopupComponent } from './AdminPortal/employee-info/inventory-popup/inventory-popup.component';
 
 
 
