@@ -51,17 +51,13 @@ export class LoginService {
         console.log(decoded);
         localStorage.setItem("id",decoded['nameid']);
         if  (decoded['role'] == "Employee") {
-          this.router.navigateByUrl("/home", { replaceUrl: true });
+          this.router.navigateByUrl("", { replaceUrl: true });
 
         }
-        // else if  (decoded['role'] == "admin") {
-        //   this.router.navigateByUrl("/admin-restaurant", { replaceUrl: true });
-        // }
-        // else if(decoded['role'] == "Worker") {
-        //     this.router.navigateByUrl("/worker", { replaceUrl: true });
-        //   }else if(decoded['role'] == "Officer") {
-        //       this.router.navigateByUrl("/officer", { replaceUrl: true });
-        //     }
+        if(decoded['role']=="Admin"){
+          this.router.navigateByUrl("admin-nav",{replaceUrl:true})
+        }
+        
 
 
           });

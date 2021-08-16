@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GetInventoryRequest } from 'src/app/models/inventory/getInventoryRequest';
+import { InventoryRequestService } from 'src/app/services/inventory/inventory-request.service';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -27,13 +29,21 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./leave-popup.component.css']
 })
 export class LeavePopupComponent implements OnInit {
+  @Input() public userId:any;
+  displayedColumns: string[] = ["inventoryName",'subject', 'description',  'date',"dateApproved","status","returned","action"];
+  dataSource:GetInventoryRequest[]=[];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
-
-  constructor() { }
+  constructor(private service:InventoryRequestService) { }
 
   ngOnInit(): void {
+    this.getInventory(this.userId);
+  }
+
+  getInventory(userId:string){
+    this.service.employeeGetInventoryRequest(userId).subscribe(response => {
+      this.dataSource=response;
+      console.log(this.dataSource)
+    })
   }
 
 }

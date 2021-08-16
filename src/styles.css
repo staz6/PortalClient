@@ -9,3 +9,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 a{
   cursor: pointer;
 }
+/* class used for employee info tables */
+.history-table{
+  width:95%;
+  margin:auto;
+  padding: 10px;
+  padding-bottom:15px ;
+  border-top:1px solid rgb(182, 181, 181);
+  background-color: #f5f5f5;
+  margin-bottom: 80px;  
+}
+  
+
+/* Admin Panel Drop Down */
+.submit_button{
+  margin-top:20px;
+  padding: 2px;
+  background-color: #fff;
+  color: #2595e6;
+  border-radius: 100px;
+  border: none;
+  width:90px;
+  cursor:pointer;
+  font-weight: bold;
+  border:2px solid #2595e6;
+  outline: none;
+}
+.submit_button:hover{
+  background-color: #2595e6;
+  color: #fff;
+  transition:.5s all;
+}

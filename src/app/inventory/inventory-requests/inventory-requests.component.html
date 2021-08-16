@@ -1,1 +1,47 @@
-<p>inventory-requests works!</p>
+<app-navbar></app-navbar>
+<app-top-section></app-top-section>
+
+<div class="row">
+    <div class="clr-col-xl-12 text-left employee-heading"
+        style="display:flex; justify-content: space-between; width:95%; margin:auto; border-radius:5px 5px 0px 0px;padding:10px;padding-right:20px;padding-left:20px;background-color: #eaeaea; font-size: 18px; font-weight: bolder; color: black;">
+        <div class="">
+            Leave Reports
+        </div>
+
+    </div>
+</div>
+     <div class="second-row">
+        <div class="history-table">
+
+            <clr-datagrid>
+              <clr-dg-column class="gridLabel" ><span class="gridLabelText">Item</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Subject</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Description</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Date Requested</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Status</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">Date Approved</span></clr-dg-column>
+              <clr-dg-column class="gridLabel"><span class="gridLabelText">returned</span></clr-dg-column>
+              
+
+              <clr-dg-row *clrDgItems="let item of inventory" >
+                <clr-dg-cell>{{ item.inventoryName }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.subject }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.description }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.date }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.status }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.dateApproved }}</clr-dg-cell>
+                <clr-dg-cell>{{ item.returned }}</clr-dg-cell>
+                
+              </clr-dg-row>
+            </clr-datagrid>
+
+
+
+
+
+
+          </div>
+     </div>
+    
+      
+

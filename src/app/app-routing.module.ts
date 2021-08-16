@@ -15,6 +15,7 @@ import { AdminNavComponent } from './AdminPortal/admin-nav/admin-nav.component';
 import { EmployeeInfoComponent } from './AdminPortal/employee-info/employee-info.component';
 import { LeavePopupComponent } from './AdminPortal/employee-info/leave-popup/leave-popup.component';
 import { InventoryComponent } from './AdminPortal/inventory/inventory.component';
+import { InventoryRequestsComponent } from './inventory/inventory-requests/inventory-requests.component';
 
 const routes: Routes = [
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path : "leavereport",component:LeaveReportComponent  },
   {path: "leave",component:GetLeaveComponent},
   {path: "inventoryticket",component:InventoryTicketComponent},
+  {path:"inventoryrequests",component:InventoryRequestsComponent},
   {path: "admin-nav", component:AdminNavComponent,
   children:[
   {path: "", component:DashboardComponent},
