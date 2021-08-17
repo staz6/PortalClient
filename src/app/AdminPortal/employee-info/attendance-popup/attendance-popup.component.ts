@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Attendance } from 'src/app/models/attendance/attendance';
-import { AttendaceService } from 'src/app/services/attendace/attendace.service';
+import { Attendance } from 'src/app/Helper/models/attendance/attendance';
+import { AttendaceService } from 'src/app/Helper/services/attendace/attendace.service';
 
 @Component({
   selector: 'app-attendance-popup',

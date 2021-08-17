@@ -1,25 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GetInventoryRequest } from 'src/app/models/inventory/getInventoryRequest';
-import { InventoryRequestService } from 'src/app/services/inventory/inventory-request.service';
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
+import { AcceptLeave } from 'src/app/Helper/models/attendance/acceptLeave';
+import { GetLeave } from 'src/app/Helper/models/attendance/getLeave';
+import { GetInventoryRequest } from 'src/app/Helper/models/inventory/getInventoryRequest';
+import { AttendaceService } from 'src/app/Helper/services/attendace/attendace.service';
+import { InventoryRequestService } from 'src/app/Helper/services/inventory/inventory-request.service';
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
+
+
 
 
 
@@ -30,19 +17,26 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class LeavePopupComponent implements OnInit {
   @Input() public userId:any;
-  displayedColumns: string[] = ["inventoryName",'subject', 'description',  'date',"dateApproved","status","returned","action"];
-  dataSource:GetInventoryRequest[]=[];
+  displayedColumns: string[] = ["from",'till', 'reason',  'leaveType',"status","action"];
+  dataSource:GetLeave[]=[];
 
-  constructor(private service:InventoryRequestService) { }
-
+  constructor(private service:AttendaceService) { }
+  body:AcceptLeave={deductSalary:false,status:false}
   ngOnInit(): void {
     this.getInventory(this.userId);
   }
 
   getInventory(userId:string){
-    this.service.employeeGetInventoryRequest(userId).subscribe(response => {
+    this.service.getLeave(userId).subscribe(response => {
       this.dataSource=response;
-      console.log(this.dataSource)
+      console.log(response)
+    })
+  }
+  acceptLeave(id:number){
+
+    this.service.acceptLeave(id).subscribe(response => {
+      console.log(response);
+      this.getInventory(this.userId);
     })
   }
 

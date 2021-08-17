@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GetInventoryRequest } from 'src/app/models/inventory/getInventoryRequest';
-import { InventoryRequestService } from 'src/app/services/inventory/inventory-request.service';
+import { GetInventoryRequest } from 'src/app/Helper/models/inventory/getInventoryRequest';
+import { InventoryRequestService } from 'src/app/Helper/services/inventory/inventory-request.service';
 
 @Component({
   selector: 'app-inventory-popup',

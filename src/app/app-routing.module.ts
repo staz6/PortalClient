@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeSalaryComponent } from './Attendance/employee-attendance/employee-salary.component';
-import { HomeComponent } from './home/home.component';
-import { InventoryTicketComponent } from './inventory/inventory-ticket/inventory-ticket.component';
-import { LeaveComponent } from './Attendance/leave/leave.component';
-import { LoginComponent } from './login/login.component';
-import { SalaryHistoryComponent } from './Salary/salary-history/salary-history.component';
-import { SubmitDocumentComponent } from './submit-document/submit-document.component';
-import { LeaveReportComponent } from './Attendance/leave-report/leave-report.component';
-import { GetLeaveComponent } from './Attendance/get-leave/get-leave.component';
+import { EmployeeSalaryComponent } from './EmployeePortal/Attendance/employee-attendance/employee-salary.component';
+import { HomeComponent } from './EmployeePortal/home/home.component';
+import { InventoryTicketComponent } from './EmployeePortal/inventory/inventory-ticket/inventory-ticket.component';
+import { LeaveComponent } from './EmployeePortal/Attendance/leave/leave.component';
+import { LoginComponent } from './Core/login/login.component';
+import { SalaryHistoryComponent } from './EmployeePortal/Salary/salary-history/salary-history.component';
+import { SubmitDocumentComponent } from './EmployeePortal/Document/documents-submit/submit-document/submit-document.component';
+import { LeaveReportComponent } from './EmployeePortal/Attendance/leave-report/leave-report.component';
+import { GetLeaveComponent } from './EmployeePortal/Attendance/get-leave/get-leave.component';
 import { DashboardComponent } from './AdminPortal/dashboard/dashboard.component';
-import { SalarySlipComponent } from './Salary/salary-slip/salary-slip.component';
+import { SalarySlipComponent } from './EmployeePortal/Salary/salary-slip/salary-slip.component';
 import { AdminNavComponent } from './AdminPortal/admin-nav/admin-nav.component';
 import { EmployeeInfoComponent } from './AdminPortal/employee-info/employee-info.component';
 import { LeavePopupComponent } from './AdminPortal/employee-info/leave-popup/leave-popup.component';
 import { InventoryComponent } from './AdminPortal/inventory/inventory.component';
-import { InventoryRequestsComponent } from './inventory/inventory-requests/inventory-requests.component';
+import { InventoryRequestsComponent } from './EmployeePortal/inventory/inventory-requests/inventory-requests.component';
 
 const routes: Routes = [
 

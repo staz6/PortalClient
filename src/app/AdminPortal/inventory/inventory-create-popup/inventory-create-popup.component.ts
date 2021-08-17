@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { InventoryPost } from 'src/app/models/inventory/inventorypost';
-import { InventoryService } from 'src/app/services/inventory/inventory.service';
+import { InventoryPost } from 'src/app/Helper/models/inventory/inventorypost';
+import { InventoryService } from 'src/app/Helper/services/inventory/inventory.service';
 
 
 @Component({

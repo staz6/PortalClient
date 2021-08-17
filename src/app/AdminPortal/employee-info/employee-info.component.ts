@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { Employee } from 'src/app/models/employee';
-import { EmployeesService } from 'src/app/services/employee/employees.service';
+import { Employee } from 'src/app/Helper/models/employee';
+import { EmployeesService } from 'src/app/Helper/services/employee/employees.service';
 import { LeavePopupComponent } from '../../AdminPortal/employee-info/leave-popup/leave-popup.component'
 import { AttendancePopupComponent } from './attendance-popup/attendance-popup.component';
 import { InventoryPopupComponent } from './inventory-popup/inventory-popup.component';
@@ -36,8 +36,9 @@ export class EmployeeInfoComponent implements OnInit {
     const dialogRef=this.dialog.open(AttendancePopupComponent);
     dialogRef.componentInstance.userId=userId;
   }
-  openLeaveDialog() {
+  openLeaveDialog(userId:string) {
     const dialogRef = this.dialog.open(LeavePopupComponent);
+    dialogRef.componentInstance.userId=userId
     
   }
   openInventoryDialog(userId:string){

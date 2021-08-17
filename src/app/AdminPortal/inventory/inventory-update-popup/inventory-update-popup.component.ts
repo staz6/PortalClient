@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { GetInventory } from 'src/app/models/inventory/getInventory';
-import { InventoryPost } from 'src/app/models/inventory/inventorypost';
-import { InventoryService } from 'src/app/services/inventory/inventory.service';
+import { GetInventory } from 'src/app/Helper/models/inventory/getInventory';
+import { InventoryPost } from 'src/app/Helper/models/inventory/inventorypost';
+import { InventoryService } from 'src/app/Helper/services/inventory/inventory.service';
 
 @Component({
   selector: 'app-inventory-update-popup',

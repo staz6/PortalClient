@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { GetInventory } from 'src/app/models/inventory/getInventory';
-import { InventoryService } from 'src/app/services/inventory/inventory.service';
+import { GetInventory } from 'src/app/Helper/models/inventory/getInventory';
+import { InventoryService } from 'src/app/Helper/services/inventory/inventory.service';
 import {InventoryUpdatePopupComponent} from '../inventory/inventory-update-popup/inventory-update-popup.component'
 import { InventoryCreatePopupComponent } from './inventory-create-popup/inventory-create-popup.component';
 
