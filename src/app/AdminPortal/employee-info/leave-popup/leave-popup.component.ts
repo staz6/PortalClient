@@ -33,10 +33,12 @@ export class LeavePopupComponent implements OnInit {
     })
   }
   acceptLeave(id:number){
-
+    console.log("acceptLeave")
     this.service.acceptLeave(id).subscribe(response => {
       console.log(response);
       this.getInventory(this.userId);
+    },Error => {
+      console.log(Error)
     })
   }
 
