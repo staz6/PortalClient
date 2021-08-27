@@ -8,6 +8,7 @@
       <a mat-list-item routerLink="dashboard">Dashboard</a>
       <a mat-list-item routerLink="emplyee-info">Employee Info</a>
       <a mat-list-item routerLink="admin-inventory">Inventory</a>
+      <a mat-list-item routerLink="project">Projects</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,7 +23,9 @@
       </button>
       <span>Nastech-Portal</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <section [ngSwitch]="userType">
+      <router-outlet></router-outlet>
+    </section>
+    
   </mat-sidenav-content>
 </mat-sidenav-container>
-<router-outlet></router-outlet>

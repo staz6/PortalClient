@@ -15,7 +15,9 @@ export class AdminNavComponent {
       map(result => result.matches),
       shareReplay()
     );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
+    userType:string;
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.userType="dashboard"
+  }
 
 }

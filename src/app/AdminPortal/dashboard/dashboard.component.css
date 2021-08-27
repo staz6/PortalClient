@@ -10,10 +10,7 @@ mat-card{
 h1,h2,h3,h4,h5,p{
     margin: 0px;
 }
-.left{
-    /* margin-top: 10px; */
-    background-color:#f5f6f7;
-}
+
 
 .for-align{
     display: flex;
@@ -60,14 +57,10 @@ table {
 
 
 @media(min-width:600px){
-    .left{
-        margin-left: 215px;
-    }
+    
 }
 @media(min-width:1024px) and (max-width:1200px){
-    .left{
-        height:100%
-    }
+   
 }
 @media(min-width:768px) and (max-width:1024px){
     .news-right-side{

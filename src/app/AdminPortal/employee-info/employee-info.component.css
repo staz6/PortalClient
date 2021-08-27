@@ -1,9 +1,4 @@
-.left{
-    /* margin-top: 10px; */
-    background-color:#f5f6f7;
-    /* height:100%; */
-    overflow: hidden;
-}
+
 .mat-dialog-container{
   height:90vh !important
 }
@@ -93,14 +88,3 @@ h4{
 
 
   
-
-@media(min-width:600px){
-    .left{
-        margin-left: 215px;
-    }
-}
-@media(min-width:1024px) and (max-width:1200px){
-    .left{
-        height:100%
-    }
-}

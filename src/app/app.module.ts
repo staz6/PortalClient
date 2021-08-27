@@ -49,6 +49,7 @@ import { InventoryComponent } from './AdminPortal/inventory/inventory.component'
 import { InventoryUpdatePopupComponent } from './AdminPortal/inventory/inventory-update-popup/inventory-update-popup.component';
 import { InventoryCreatePopupComponent } from './AdminPortal/inventory/inventory-create-popup/inventory-create-popup.component';
 import { InventoryPopupComponent } from './AdminPortal/employee-info/inventory-popup/inventory-popup.component';
+import { ProjectComponent } from './AdminPortal/project.component';
 
 
 
@@ -81,7 +82,8 @@ import { InventoryPopupComponent } from './AdminPortal/employee-info/inventory-p
     InventoryComponent,
     InventoryUpdatePopupComponent,
     InventoryCreatePopupComponent,
-    InventoryPopupComponent
+    InventoryPopupComponent,
+    ProjectComponent
 
 
   ],
