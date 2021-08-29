@@ -1,0 +1,71 @@
+.left{
+    overflow-x: hidden;
+    padding:1%;
+}
+.card-container{
+    margin-top: 1%;
+}
+.example-header-image{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.project-image{
+  background-size: contain;
+    background-repeat: no-repeat;
+  height:300px;
+}
+.overide-mat-card-actions{
+    padding:0px;
+}
+.avatar img {
+    border-radius: 50%;
+    position: relative;
+    left: -5px;
+    margin-left: -25px;
+    z-index: 1;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+.avatar:not(:last-child) img:hover{
+    margin-left: 0px;
+    transition: 0.5s;
+}
+  
+  .avatars {
+    direction: rtl;  /* This is to get the stack with left on top */
+    text-align: left;  /* Now need to explitly align left */
+    padding-left: 40px;  /* Same value as the negative margin */
+  }
+.mat-tooltip  {
+    white-space: pre-line;
+}
+
+
+
+.container {
+    position: relative;
+    height:auto;
+    width:auto;
+  }
+  
+
+  .button {
+    position: absolute;
+    width: 500px;
+    left:0;
+    top: 180px;
+    text-align: center;
+    transition: opacity .35s ease;
+  }
+  
+  .button a {
+    width: 200px;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+  }
+  
+
+  

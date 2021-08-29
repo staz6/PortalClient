@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './EmployeePortal/home/home.component';
 import { ClarityModule } from '@clr/angular';
@@ -49,7 +50,8 @@ import { InventoryComponent } from './AdminPortal/inventory/inventory.component'
 import { InventoryUpdatePopupComponent } from './AdminPortal/inventory/inventory-update-popup/inventory-update-popup.component';
 import { InventoryCreatePopupComponent } from './AdminPortal/inventory/inventory-create-popup/inventory-create-popup.component';
 import { InventoryPopupComponent } from './AdminPortal/employee-info/inventory-popup/inventory-popup.component';
-import { ProjectComponent } from './AdminPortal/project.component';
+import { ProjectComponent } from './AdminPortal/project/project.component';
+import { ProjectCreatePopupComponent } from './AdminPortal/project/project-create-popup/project-create-popup.component';
 
 
 
@@ -83,7 +85,8 @@ import { ProjectComponent } from './AdminPortal/project.component';
     InventoryUpdatePopupComponent,
     InventoryCreatePopupComponent,
     InventoryPopupComponent,
-    ProjectComponent
+    ProjectComponent,
+    ProjectCreatePopupComponent
 
 
   ],

@@ -16,7 +16,8 @@ import { EmployeeInfoComponent } from './AdminPortal/employee-info/employee-info
 import { LeavePopupComponent } from './AdminPortal/employee-info/leave-popup/leave-popup.component';
 import { InventoryComponent } from './AdminPortal/inventory/inventory.component';
 import { InventoryRequestsComponent } from './EmployeePortal/inventory/inventory-requests/inventory-requests.component';
-import { ProjectComponent } from './AdminPortal/project.component';
+import { ProjectComponent } from './AdminPortal/project/project.component';
+import { ProjectDetailComponent } from './AdminPortal/project/project-detail/project-detail.component';
 
 const routes: Routes = [
 
@@ -39,7 +40,8 @@ const routes: Routes = [
   {path:"emplyee-info", component:EmployeeInfoComponent},
   {path:"leave", component:LeavePopupComponent},
   {path:"admin-inventory", component:InventoryComponent},
-  {path:"project",component:ProjectComponent}
+  {path:"project",component:ProjectComponent},
+  {path:"project/projectdetail/:id",component:ProjectDetailComponent}
   ]
 }
 

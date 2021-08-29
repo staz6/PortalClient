@@ -20,7 +20,22 @@ a{
   margin-bottom: 80px;  
 }
   
-
+.blue-submit_button{
+  background-color:#2595e6;
+  color: #fff;
+  padding: 0px 10px 0px 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin:10px 0 10px 0;
+  font-size: 15px;
+  transition:none;
+}
+.blue-submit_button:hover{
+  background-color: #fff;
+  color: #2595e6;
+  transition:.5s all;
+}
 /* Admin Panel Drop Down */
 .submit_button{
   background-color: #fff;

@@ -1,0 +1,47 @@
+<Section class="left">
+
+    <div class="clr-row" style="text-align: right;">
+      <div class="clr-col-xl-12 text-right">
+        <button mat-button class="blue-submit_button" (click)="projectCreateDialog()" style="margin-top: 5px;">Create Project</button>
+      </div>
+    </div>
+
+    <div class="clr-row">
+      
+        <div class="clr-col-4 card-container" *ngFor="let item of body">
+          <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image" [style.backgroundImage]="'url('+item.logo+')'" >
+                  
+                </div>
+                <mat-card-title class="card-title" >{{item.title}}</mat-card-title>
+                <mat-card-subtitle><strong>Project Lead : </strong> {{item.projectLeadName}}</mat-card-subtitle>
+              </mat-card-header>
+                <img mat-card-image class="project-image" [src]="item.image" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  {{item.description}}
+                </p>
+              </mat-card-content>
+              <mat-card-actions class='overide-mat-card-actions'>
+                <div class="avatars">
+                  
+                  <span class="avatar" *ngFor="let user of item.asignee">
+                        
+                        <img [src]="user.profileImage !== '' ? user.profileImage : 'https://w7.pngwing.com/pngs/613/636/png-transparent-computer-icons-user-profile-male-avatar-avatar-heroes-logo-black.png'" [matTooltip]="user.name" matTooltipClass="mat-tooltip" width="40" height="40"/>
+                  </span>
+                  
+                  
+                </div>
+                <button mat-button class="submit_button" [routerLink]="['projectdetail',item.id]" style="margin-top: 5px;">View More</button>
+              </mat-card-actions>
+            </mat-card>
+      </div>
+
+      
+        
+
+    </div>
+
+
+</Section>
