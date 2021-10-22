@@ -1,3 +1,53 @@
-<p>
-  project-detail works!
-</p>
+<Section class="left">
+
+  <div class="clr-row" style="text-align: right;">
+    <div class="clr-col-xl-12 text-right" >
+      <button mat-button class="blue-submit_button" *ngIf="projectPhase.length == 0" (click)="defaultProjectPhase()"  style="margin-top: 5px;">Default Phases</button>
+    </div>
+  </div>
+
+  <div class="parent" cdkDropListGroup>
+    
+    <div *ngFor="let item of projectPhase" class="container" >
+      <div class="phase-header-container" [style]= "'--phase-header-color:' + item.color " >
+        <mat-card class="phase-header" >     {{item.name}}
+          <span class="phase-header-count" >{{item.taskCount}}</span>
+          <span class="phase-header-plus" matTooltip="Create Task"><i (click)="taskCreateDialog(item.id)" class="fas fa-plus"></i></span>
+        </mat-card>
+
+        <div
+        cdkDropList
+        [cdkDropListData]="item.projectTasks"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div  *ngFor="let task of item.projectTasks" class="task-container" style="cursor: pointer;" (click)="taskDetailDialog(task.id)" cdkDrag>
+
+          <mat-card class="task-mat-card-container">
+            <div class="task-header">
+              {{task.createdAt}}
+            </div>
+            <div class="task-title">
+              {{task.title}}
+            </div>
+            <div class="task-footer">
+                <div class="task-count" >      
+                  <span class="fa fa-code-branch" ></span> <span style="margin-left: 5px;">3</span>
+                </div>
+                <div class="task-date">
+                  <span>{{task.startDate}}</span> - <span style="color:#ed4141">{{task.dueDate}}</span>
+                </div>
+            </div>
+            
+          </mat-card>
+
+        </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+    </div>
+</Section>

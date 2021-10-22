@@ -1,4 +1,6 @@
-
+.left{
+  overflow-x: hidden;
+}
 .mat-dialog-container{
   height:90vh !important
 }

@@ -8,10 +8,11 @@ import { SalaryService } from 'src/app/Helper/services/salary/salary.service';
   templateUrl: './salary-slip.component.html',
   styleUrls: ['./salary-slip.component.css']
 })
+
 export class SalarySlipComponent implements OnInit {
   slip:SalarySlip;
   constructor(private service:SalaryService,private route: ActivatedRoute) { }
-
+  
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
     const id = routeParams.get('id');

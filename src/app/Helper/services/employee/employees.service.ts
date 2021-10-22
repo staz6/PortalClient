@@ -3,6 +3,7 @@ import { Employee } from 'src/app/Helper/models/employee';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { baseurl } from 'src/app/Helper/models/base';
 import { postEmployeeInfo } from 'src/app/Helper/models/postEmployeeInfo';
+import { EmployeeRegistration } from '../../models/employeeRegistration';
 
 
 
@@ -32,6 +33,12 @@ export class EmployeesService {
   }
   getAllEmployeeInfo(){
     return this.http.get<Employee[]>(baseurl + 'getAllEmployee', {
+      headers:this.httpHeaders
+    })
+  }
+
+  postEmployeee(body:EmployeeRegistration){
+    return this.http.post(baseurl+'register',body,{
       headers:this.httpHeaders
     })
   }

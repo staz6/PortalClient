@@ -59,5 +59,7 @@ mat-raised-button:focus{
   border:0;
   background-color: #fff !important;
 }
-
+.example-full-width {
+  width: 100%;
+}
 

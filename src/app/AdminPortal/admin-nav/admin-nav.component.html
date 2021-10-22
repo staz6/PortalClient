@@ -11,7 +11,7 @@
       <a mat-list-item routerLink="project">Projects</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content >
     <mat-toolbar color="dark">
       <button
         type="button"
@@ -23,9 +23,12 @@
       </button>
       <span>Nastech-Portal</span>
     </mat-toolbar>
-    <section [ngSwitch]="userType">
-      <router-outlet></router-outlet>
-    </section>
+   
+      <section>
+        <router-outlet></router-outlet> 
+      </section>
+      
+    
     
   </mat-sidenav-content>
 </mat-sidenav-container>

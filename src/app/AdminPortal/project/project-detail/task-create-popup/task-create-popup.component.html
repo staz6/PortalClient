@@ -1,0 +1,102 @@
+<!-- heading -->
+<div class="clr-row">
+    <div class="clr-col-xl-12">
+        <h5 style="font-weight: bold; font-size: 20px;padding:0px 0 20px 0; color: black;">Create</h5>
+    </div>
+  </div>
+  
+  <form novalidate [formGroup]="Form" (ngSubmit)="postForm()">
+  
+    <div class="clr-row">
+        <div class="clr-col-md-6">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Title</mat-label>
+            <input formControlName="title" matInput required />
+          </mat-form-field>
+        </div>
+        <div class="clr-col-md-6">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Reporter</mat-label>
+            <input formControlName="reporter" matInput required  />
+        </mat-form-field>
+        </div>
+    
+
+    <div class="clr-col-md-12">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea formControlName="description" matInput  ></textarea>
+      </mat-form-field>
+       </div>
+
+   
+
+    <section class="clr-row" formArrayName="projectAsignee" *ngFor="let item of getControls(); let i = index;" class="example-full-width" style="display: flex;" >
+        <section [formGroupName]="i"  class="example-full-width" style="display: flex;">
+   
+          <div class="clr-col-md-6" style="padding-bottom: 0px;">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Asignee</mat-label>
+              <input formControlName="asigneeId" matInput    />
+            </mat-form-field>
+          </div>
+
+        </section>
+       </section>
+       
+
+       <div class="clr-col-md-12" style="margin-top: -10px; padding-bottom: 5px;">
+      
+        <button (click)="addItem()" class="btn-hover" mat-raised-button style="min-width:0px">
+          <i class="fas fa-plus"></i>
+        </button>
+      
+    </div>
+
+    <div class="clr-col-md-6">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Legend</mat-label>
+          <input formControlName="legend" matInput     />
+        </mat-form-field>
+      </div>
+            
+         <div class="clr-col-md-6">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Piority</mat-label>
+            <mat-select formControlName="piority" >            
+              <mat-option *ngFor="let item of projectPiority" [value]="item.index">{{item.piority}}</mat-option>  
+            </mat-select>
+          </mat-form-field>
+         </div>
+
+         <div class="clr-col-md-6">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Start Date</mat-label>
+              <input formControlName="startDate" matInput   type="date"  />
+            </mat-form-field>
+          </div>
+                
+             <div class="clr-col-md-6">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Due Date</mat-label>
+                <input formControlName="dueDate" matInput   type="date"   />
+              </mat-form-field>
+             </div>     
+        
+    </div>   
+  
+  
+  
+  
+  <div class="clr-row">
+    <div class="clr-col-xl-12 text-right update-btn">
+        <button mat-raised-button  type="submit"
+        [disabled]="Form.invalid"
+        mat-dialog-close class="btn-hover"  style=" font-weight: 500; outline: none;">Create</button>
+    </div>
+  </div>
+  </form>
+  
+  <!-- button  -->
+  
+  

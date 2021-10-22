@@ -43,7 +43,11 @@ export class ProjectCreatePopupComponent implements OnInit {
   postForm()
   {
     this.body = this.Form.value;
-    console.log(this.body)
+    this.service.postProject(this.body).subscribe(response => {
+      console.log(response)
+    }, Error => {
+      console.log(Error)
+    })
   }
 
   getControls() {

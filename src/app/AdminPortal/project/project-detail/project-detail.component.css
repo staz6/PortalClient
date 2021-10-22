@@ -1,0 +1,131 @@
+.left{
+   overflow-x: hidden; 
+    
+}
+.parent{
+    display:flex;
+    flex: row;
+    min-height: 80vh;
+    overflow:auto;
+    
+    
+}
+.container:last-child{
+    padding-right: 15px;
+}
+.container {
+
+   
+    min-width: 300px;
+    height: auto;
+    padding-top: 15px;
+    padding-left: 15px;
+    
+  }
+
+.phase-header::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--phase-header-color);
+    border-radius: 3px 3px 0 0;
+}
+.phase-header-container{
+    width: auto;
+    height: auto;
+    border: 55px grey;
+    border-width: 60px;
+  
+}
+
+.phase-header-count{
+    font-size: 12px;
+    line-height: 1px;
+    padding: 2px;
+   
+    text-align: center;
+    border-color: grey; 
+    border-radius: 40px;
+    border: 1px solid rgba(174,172,176,.45);
+    
+    
+}
+.phase-header-plus{
+    float: right; 
+    line-height: 2px;
+    margin-top: 5px;
+    padding: 0px;
+    cursor: pointer;
+    
+}
+.phase-header-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 0;
+    color: #544d61;
+    text-transform: Title;
+}
+.task-container{
+    padding-top: 7px ;
+    
+}
+.task-mat-card-container{
+    padding-left: 16px;
+    padding-top: 6px;
+    padding-bottom: 16px;
+    padding-right: 16px
+}
+.task-header{
+    white-space: nowrap;
+    top:0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #544d61;
+}
+.task-footer{
+    display: flex;
+    margin-top: 7px;
+}
+.task-count{
+    
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    margin-right: 5px;
+    border-radius: 4px;
+    transform: translateY(0);
+    background: #fff;
+    border: 1px solid #e9ebf0;
+    fill: #7c828d;
+    font-size: 12px;
+}
+.task-date{
+    fill: #7c828d;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: center;
+    margin-top:2px;
+}

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-
+import {DragDropModule} from '@angular/cdk/drag-drop';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './EmployeePortal/home/home.component';
 import { ClarityModule } from '@clr/angular';
@@ -52,8 +52,10 @@ import { InventoryCreatePopupComponent } from './AdminPortal/inventory/inventory
 import { InventoryPopupComponent } from './AdminPortal/employee-info/inventory-popup/inventory-popup.component';
 import { ProjectComponent } from './AdminPortal/project/project.component';
 import { ProjectCreatePopupComponent } from './AdminPortal/project/project-create-popup/project-create-popup.component';
-
-
+import { ProjectDetailComponent } from './AdminPortal/project/project-detail/project-detail.component';
+import { TaskCreatePopupComponent } from './AdminPortal/project/project-detail/task-create-popup/task-create-popup.component';
+import { EmployeeRegistrationPopupComponent } from './AdminPortal/employee-info/employee-registration-popup/employee-registration-popup.component';
+import { TaskDetailPopupComponent } from './AdminPortal/project/project-detail/task-detail-popup/task-detail-popup.component';
 
 
 
@@ -86,7 +88,11 @@ import { ProjectCreatePopupComponent } from './AdminPortal/project/project-creat
     InventoryCreatePopupComponent,
     InventoryPopupComponent,
     ProjectComponent,
-    ProjectCreatePopupComponent
+    ProjectCreatePopupComponent,
+    ProjectDetailComponent,
+    TaskCreatePopupComponent,
+    EmployeeRegistrationPopupComponent,
+    TaskDetailPopupComponent
 
 
   ],
@@ -94,6 +100,7 @@ import { ProjectCreatePopupComponent } from './AdminPortal/project/project-creat
     MatCardModule,
     HttpClientModule,
     MatCheckboxModule,
+    DragDropModule,
     BrowserModule,
     AppRoutingModule,
     ClarityModule,

@@ -1,7 +1,8 @@
 import { PostProjectMember } from "./postProjectMember";
 
 export interface PostProject{
-    title: string;
+        projectPhaseId: number,
+        title: string;
         description: string;
         logo: string;
         image: string;
