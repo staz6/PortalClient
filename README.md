@@ -1,6 +1,6 @@
 # NastechPortal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+Frontend for school portal. This is just mvp 1, the test implementatio.
 
 ## Development server
 
